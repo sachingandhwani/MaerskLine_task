@@ -1,0 +1,78 @@
+/* Reset CSS */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline; font-family: Arial, Helvetica, sans-serif;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1; color: #000;
+}
+ol, ul, li {
+	list-style: none;
+}
+
+/* Main CSS start form here */
+#wrapper{ max-width:960px; background:#efefef; margin:0 auto; width: 100%}
+.container{border-top:5px solid #bfbfbf; display: flex;}
+.title{text-align: center; background:#fff; padding:10px 0}
+ /* left section */
+#left-section{ width:80%; display:flex; flex-wrap: wrap;}
+#left-section div.items {
+  width: calc(100% / 3); color: #fff; display: flex;
+  min-height: 180px; align-items: center;
+  justify-content: center; font-size: 3rem;
+}
+/* Sidebar Button section */
+#sidebar{ width:30%; display: flex;  flex-flow: column wrap; padding-top:1.2rem }
+#sidebar button{background:#72c3dc; line-height:36px; margin: 10px 30px; 
+text-transform: uppercase; color:#fff; font-size:12px; text-align: center; border: 0; border-radius:4px; 
+-webkit-box-shadow: 0px 3px 0px 0px rgba(42,141,172,1);
+-moz-box-shadow: 0px 3px 0px 0px rgba(42,141,172,1);
+box-shadow: 0px 3px 0px 0px rgba(42,141,172,1); outline: none; cursor: pointer; }
+
+.blue-box-light{background:#6f98a8}
+.blue-box{background:#2b8ead}
+.blue-box-dark{background:#2f454e}
+.gray-box{background:#bfbfbf}
+
+footer{text-align: center; font-size:12px; font-style: italic; color:#333; padding:12px 0 45px}
+  
+/* Media query for mobile devices */
+@media only screen and (max-width: 375px) {
+  #wrapper{background:#fff}
+  .container {flex-direction: column-reverse; border: 0}
+  /* left section */
+  #left-section{width:90%; margin:0 auto} #left-section{flex-direction: column;}
+  #left-section div.items{width:100%; min-height: auto; font-size:0.8rem; color:#333; margin:2px 0; padding:10px 0}
+  .blue-box-light, .blue-box, .blue-box-dark, .gray-box{ background:#efefef; }
+  .blue-box-light{border-left:5px solid #6f98a8}
+  .blue-box{border-left:5px solid #2b8ead}
+  .blue-box-dark{border-left:5px solid #2f454e}
+  .gray-box{border-left:5px solid #bfbfbf}
+
+  /* top button */
+  #sidebar{justify-content:center; flex-flow: row; padding:0 0 4px; width:100%}
+  #sidebar button{margin: 10px 5px; min-width: 100px;}
+  .title{background:#333; color:#fff}
+}
+  
